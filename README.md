@@ -17,3 +17,15 @@ We use the mortality prediction task introduced in van Aken et al. (2021) as the
 | Document Length (Average) | 396.6 words |
 | Document Length (95th Percentile) | 809.0 words |
 | Document Length (99th Percentile) | 1,054.2 words |
+
+### Bayesian Rule Lists: Example Rules
+The following table shows 6 of the 50 rules learned by the classifier with depth-1 trees:
+
+| Example Rules | 
+| ----- |
+| intub <= 0.0162 |
+| intub <= 0.0162 |
+| nad <= 0.0274 |
+| unrespons <= 0.0538 |
+| exert <= 0.0454 |
+| metastat <= 0.0299 |
