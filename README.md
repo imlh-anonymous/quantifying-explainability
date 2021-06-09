@@ -2,7 +2,14 @@
 This is a temporary location for hosting additional material during the double-blind review process of IMLH 2021. 
 
 ## Code 
-A standalone script for our document perturbation method is provided in `input_perturbation.py` - it can perform token replacement using either an embedding matrix (e.g., for a HuggingFace Transformer model like our BigBird classifier) or a Gensim word2vec-style object containing word vectors. These techniques are used in the Jupyter notebook titled `metric-implementation-with-perturbation-anonymized.ipynb`, along with some EDA done during the development process. This notebook is where we implement a generalized local Lipschitz and calculate on a subset of documents, in addition to the same process for infidelity (via the Captum library).
+A standalone script for our document perturbation method is provided in [`input_perturbation.py`](./input_perturbation.py) - it can perform token replacement using either an embedding matrix (e.g., for a HuggingFace Transformer model like our BigBird classifier) or a Gensim word2vec-style object containing word vectors. These techniques are used in the Jupyter notebook titled [`metric-implementation-with-perturbation-anonymized.ipynb`](./metric-implementation-with-perturbation-anonymized.ipynb), along with some EDA done during the development process. This notebook is where we implement a generalized local Lipschitz and calculate on a subset of documents, in addition to the same process for infidelity (via the Captum library).
+
+**Please note:** this notebook takes 15+ hours to execute with the current selection of attribution methods, models, number of documents, and neighbors per document. We used a machine with 208GB RAM.
+
+## Steps to Reproduce
+1. Obtain access to [MIMIC data](http://mimic.physionet.org/)
+2. Follow the dataset preparation steps in the [benchmark task repo](https://github.com/bvanaken/clinical-outcome-prediction)
+3. Update location of stored data in notebook and execute
 
 ## Supplemental Figures and Notes
 ### Dataset Statistics
