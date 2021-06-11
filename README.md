@@ -36,3 +36,24 @@ The following table shows 6 of the 50 rules learned by the classifier with depth
 | unrespons <= 0.0538 |
 | exert <= 0.0454 |
 | metastat <= 0.0299 |
+
+### Explainability Comparison: Truth vs. LIME vs. SHAP for EBM
+In the images below, we can see a comparison of the attributions provided by LIME and SHAP against the true explanations from the "glassbox" EBM model. We can see that the results are similar to those for the logistic regression model: LIME identifies fewer features, with virtually none appearing in the true attributions. SHAP, on the other hand, identifies many of the true features, albeit with some discrepancies in the relative importance and unable to attribute interactions.
+
+True attributions:
+
+![](img/interpret_ebm_truth.png)
+
+SHAP:
+
+![](img/interpret_ebm_shap.png)
+
+LIME:
+
+![](img/interpret_ebm_lime.png)
+
+
+### Transformer Explainability: Ecco
+Another view of the Ecco visualization is provided below - all factors are highlighted, and we can see the sparklines provide additional spatial information within the input document.
+
+![](img/ecco_all.png)
